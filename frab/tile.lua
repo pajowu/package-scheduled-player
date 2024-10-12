@@ -488,7 +488,7 @@ local function view_all_talks(starts, ends, config, x1, y1, x2, y2)
         a.add(anims.moving_image_raw(
             S, E, talk.track.background,
             x+split_x-25, y, x+split_x-12,
-            y + title_size*#title_lines + 3 + #info_lines*info_size
+            y + title_size*#title_lines -- + #info_lines*info_size
         ))
 
         -- title
@@ -499,11 +499,11 @@ local function view_all_talks(starts, ends, config, x1, y1, x2, y2)
         y = y + 3
 
         -- info
-        for idx = 1, #info_lines do
-            text(x+split_x, y, info_lines[idx], info_size, rgba(default_color,.8))
-            y = y + info_size
-        end
-        y = y + 20
+        -- for idx = 1, #info_lines do
+        --     text(x+split_x, y, info_lines[idx], info_size, rgba(default_color,.8))
+        --     y = y + info_size
+        -- end
+        -- y = y + 20
     end
 
     for now in api.frame_between(starts, ends) do
