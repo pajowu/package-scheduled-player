@@ -496,7 +496,7 @@ local function view_all_talks(starts, ends, config, x1, y1, x2, y2)
             text(x+split_x, y, title_lines[idx], title_size, rgba(default_color,1))
             y = y + title_size
         end
-        y = y + 3
+        y = y + 20
 
         -- info
         -- for idx = 1, #info_lines do
