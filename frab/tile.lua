@@ -150,7 +150,7 @@ local function check_next_talk()
         end
 
         -- Starting soon
-        if talk.start_end > now and #next_talks < 20 then
+        if talk.end_unix > now and #next_talks < 20 then
             next_talks[#next_talks+1] = talk
         end
     end
